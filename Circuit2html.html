@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)https://www.circuit-diagram.org/editor/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>Circuit Diagram Web Editor</title>
+  <meta name="description" content="Create electronic circuit diagrams online in your browser with the Circuit Diagram Web Editor.">
+  <!--<base href="/editor/">--><base href=".">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style type="text/css">svg:not(:root).svg-inline--fa {
+  overflow: visible; }
+
+.svg-inline--fa {
+  display: inline-block;
+  font-size: inherit;
+  height: 1em;
+  overflow: visible;
+  vertical-align: -.125em; }
+  .svg-inline--fa.fa-lg {
+    vertical-align: -.225em; }
+  .svg-inline--fa.fa-w-1 {
+    width: 0.0625em; }
+  .svg-inline--fa.fa-w-2 {
+    width: 0.125em; }
+  .svg-inline--fa.fa-w-3 {
+    width: 0.1875em; }
+  .svg-inline--fa.fa-w-4 {
+    width: 0.25em; }
+  .svg-inline--fa.fa-w-5 {
+    width: 0.3125em; }
+  .svg-inline--fa.fa-w-6 {
+    width: 0.375em; }
+  .svg-inline--fa.fa-w-7 {
+    width: 0.4375em; }
+  .svg-inline--fa.fa-w-8 {
+    width: 0.5em; }
+  .svg-inline--fa.fa-w-9 {
+    width: 0.5625em; }
+  .svg-inline--fa.fa-w-10 {
+    width: 0.625em; }
+  .svg-inline--fa.fa-w-11 {
+    width: 0.6875em; }
+  .svg-inline--fa.fa-w-12 {
+    width: 0.75em; }
+  .svg-inline--fa.fa-w-13 {
+    width: 0.8125em; }
+  .svg-inline--fa.fa-w-14 {
+    width: 0.875em; }
+  .svg-inline--fa.fa-w-15 {
+    width: 0.9375em; }
+  .svg-inline--fa.fa-w-16 {
+    width: 1em; }
+  .svg-inline--fa.fa-w-17 {
+    width: 1.0625em; }
+  .svg-inline--fa.fa-w-18 {
+    width: 1.125em; }
+  .svg-inline--fa.fa-w-19 {
+    width: 1.1875em; }
+  .svg-inline--fa.fa-w-20 {
+    width: 1.25em; }
+  .svg-inline--fa.fa-pull-left {
+    margin-right: .3em;
+    width: auto; }
+  .svg-inline--fa.fa-pull-right {
+    margin-left: .3em;
+    width: auto; }
+  .svg-inline--fa.fa-border {
+    height: 1.5em; }
+  .svg-inline--fa.fa-li {
+    width: 2em; }
+  .svg-inline--fa.fa-fw {
+    width: 1.25em; }
+
+.fa-layers svg.svg-inline--fa {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0; }
+
+.fa-layers {
+  display: inline-block;
+  height: 1em;
+  position: relative;
+  text-align: center;
+  vertical-align: -.125em;
+  width: 1em; }
+  .fa-layers svg.svg-inline--fa {
+    -webkit-transform-origin: center center;
+            transform-origin: center center; }
+
+.fa-layers-text, .fa-layers-counter {
+  display: inline-block;
+  position: absolute;
+  text-align: center; }
+
+.fa-layers-text {
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transform-origin: center center;
+          transform-origin: center center; }
+
+.fa-layers-counter {
+  background-color: #ff253a;
+  border-radius: 1em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #fff;
+  height: 1.5em;
+  line-height: 1;
+  max-width: 5em;
+  min-width: 1.5em;
+  overflow: hidden;
+  padding: .25em;
+  right: 0;
+  text-overflow: ellipsis;
+  top: 0;
+  -webkit-transform: scale(0.25);
+          transform: scale(0.25);
+  -webkit-transform-origin: top right;
+          transform-origin: top right; }
+
+.fa-layers-bottom-right {
+  bottom: 0;
+  right: 0;
+  top: auto;
+  -webkit-transform: scale(0.25);
+          transform: scale(0.25);
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right; }
+
+.fa-layers-bottom-left {
+  bottom: 0;
+  left: 0;
+  right: auto;
+  top: auto;
+  -webkit-transform: scale(0.25);
+          transform: scale(0.25);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left; }
+
+.fa-layers-top-right {
+  right: 0;
+  top: 0;
+  -webkit-transform: scale(0.25);
+          transform: scale(0.25);
+  -webkit-transform-origin: top right;
+          transform-origin: top right; }
+
+.fa-layers-top-left {
+  left: 0;
+  right: auto;
+  top: 0;
+  -webkit-transform: scale(0.25);
+          transform: scale(0.25);
+  -webkit-transform-origin: top left;
+          transform-origin: top left; }
+
+.fa-lg {
+  font-size: 1.33333em;
+  line-height: 0.75em;
+  vertical-align: -.0667em; }
+
+.fa-xs {
+  font-size: .75em; }
+
+.fa-sm {
+  font-size: .875em; }
+
+.fa-1x {
+  font-size: 1em; }
+
+.fa-2x {
+  font-size: 2em; }
+
+.fa-3x {
+  font-size: 3em; }
+
+.fa-4x {
+  font-size: 4em; }
+
+.fa-5x {
+  font-size: 5em; }
+
+.fa-6x {
+  font-size: 6em; }
+
+.fa-7x {
+  font-size: 7em; }
+
+.fa-8x {
+  font-size: 8em; }
+
+.fa-9x {
+  font-size: 9em; }
+
+.fa-10x {
+  font-size: 10em; }
+
+.fa-fw {
+  text-align: center;
+  width: 1.25em; }
+
+.fa-ul {
+  list-style-type: none;
+  margin-left: 2.5em;
+  padding-left: 0; }
+  .fa-ul > li {
+    position: relative; }
+
+.fa-li {
+  left: -2em;
+  position: absolute;
+  text-align: center;
+  width: 2em;
+  line-height: inherit; }
+
+.fa-border {
+  border: solid 0.08em #eee;
+  border-radius: .1em;
+  padding: .2em .25em .15em; }
+
+.fa-pull-left {
+  float: left; }
+
+.fa-pull-right {
+  float: right; }
+
+.fa.fa-pull-left,
+.fas.fa-pull-left,
+.far.fa-pull-left,
+.fal.fa-pull-left,
+.fab.fa-pull-left {
+  margin-right: .3em; }
+
+.fa.fa-pull-right,
+.fas.fa-pull-right,
+.far.fa-pull-right,
+.fal.fa-pull-right,
+.fab.fa-pull-right {
+  margin-left: .3em; }
+
+.fa-spin {
+  -webkit-animation: fa-spin 2s infinite linear;
+          animation: fa-spin 2s infinite linear; }
+
+.fa-pulse {
+  -webkit-animation: fa-spin 1s infinite steps(8);
+          animation: fa-spin 1s infinite steps(8); }
+
+@-webkit-keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+.fa-rotate-90 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg); }
+
+.fa-rotate-180 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg); }
+
+.fa-rotate-270 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg); }
+
+.fa-flip-horizontal {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
+  -webkit-transform: scale(-1, 1);
+          transform: scale(-1, 1); }
+
+.fa-flip-vertical {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+  -webkit-transform: scale(1, -1);
+          transform: scale(1, -1); }
+
+.fa-flip-horizontal.fa-flip-vertical {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+  -webkit-transform: scale(-1, -1);
+          transform: scale(-1, -1); }
+
+:root .fa-rotate-90,
+:root .fa-rotate-180,
+:root .fa-rotate-270,
+:root .fa-flip-horizontal,
+:root .fa-flip-vertical {
+  -webkit-filter: none;
+          filter: none; }
+
+.fa-stack {
+  display: inline-block;
+  height: 2em;
+  position: relative;
+  width: 2em; }
+
+.fa-stack-1x,
+.fa-stack-2x {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0; }
+
+.svg-inline--fa.fa-stack-1x {
+  height: 1em;
+  width: 1em; }
+
+.svg-inline--fa.fa-stack-2x {
+  height: 2em;
+  width: 2em; }
+
+.fa-inverse {
+  color: #fff; }
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+.sr-only-focusable:active, .sr-only-focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto; }
+</style><link rel="icon" type="image/x-icon" href="https://www.circuit-diagram.org/editor/favicon.ico">
+  <style type="text/css">
+body {
+  margin: 0;
+  font-size: 14px;
+  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+  </style>
+  <script src="./Circuit2html_files/cb=gapi.loaded_0" async=""></script><script type="text/javascript" async="" src="./Circuit2html_files/analytics.js.download"></script><script async="" src="./Circuit2html_files/js"></script>
+  <script async="" src="./Circuit2html_files/f.txt"></script>
+  <script src="./Circuit2html_files/platform.js.download" gapi_processed="true"></script>
+  <script>
+    window = window || [];
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-18238355-2', { 'send_page_view': false });
+  </script>
+<link rel="stylesheet" href="./Circuit2html_files/styles.d2acab9582bddafa228d.css"><style ng-transition="circuit-diagram">[_nghost-sc0] {
+  display: flex;
+  height: 100%;
+}
+header[_ngcontent-sc0] {
+  padding: 16px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  line-height: 2em;
+}
+header[_ngcontent-sc0]   .brand[_ngcontent-sc0]:before {
+  width: 0;
+}
+header[_ngcontent-sc0]   .ui.fixed.menu[_ngcontent-sc0] {
+  position: fixed;
+  z-index: 101;
+  margin: 0;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: auto;
+  bottom: auto;
+  background-color: #3f92d2;
+  display: flex;
+  border: 1px solid rgba(34, 36, 38, 0.15);
+  box-shadow: 0 1px 2px 0 rgba(34, 36, 38, 0.15);
+  white-space: nowrap;
+}
+header[_ngcontent-sc0]   .ui.fixed.menu[_ngcontent-sc0]   .ui.item[_ngcontent-sc0] {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+header[_ngcontent-sc0]   .ui.fixed.menu[_ngcontent-sc0]   .right.menu[_ngcontent-sc0] {
+  display: flex;
+  margin-left: auto!important;
+}
+header[_ngcontent-sc0]   .ui.fixed.menu[_ngcontent-sc0]   .item[_ngcontent-sc0] {
+  color: white;
+  transition: none;
+  display: flex;
+  padding: 0.92857143em 1.14285714em;
+  text-decoration: none;
+}
+header[_ngcontent-sc0]   .ui.fixed.menu[_ngcontent-sc0]   .item[_ngcontent-sc0]::before {
+  width: 0;
+}
+header[_ngcontent-sc0]   .ui.fixed.menu[_ngcontent-sc0]   .item.active[_ngcontent-sc0] {
+  color: white;
+  background-color: #75a4c8;
+}
+header[_ngcontent-sc0]   .ui.fixed.menu[_ngcontent-sc0]   a.item[_ngcontent-sc0]:hover {
+  color: #3f92d2;
+  background-color: white;
+  cursor: pointer;
+}
+header[_ngcontent-sc0]   a[_ngcontent-sc0] {
+  color: white;
+}
+header[_ngcontent-sc0]   h1[_ngcontent-sc0] {
+  font-size: 16pt;
+  font-weight: normal;
+  display: inline-block;
+  margin: 0;
+}
+main[_ngcontent-sc0] {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.content-host[_ngcontent-sc0] {
+  flex: 1;
+  display: flex;
+}
+footer[_ngcontent-sc0] {
+  text-align: center;
+  font-size: 0.8em;
+}
+.user-popup[_ngcontent-sc0] {
+  width: 180px;
+  text-align: center;
+}
+.user-popup[_ngcontent-sc0]   p[_ngcontent-sc0] {
+  font-size: 12px;
+}
+.header-spacer[_ngcontent-sc0] {
+  height: 55px;
+}</style><style ng-transition="circuit-diagram">.avatar.image[_ngcontent-sc1] {
+  margin-right: 0.25em;
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  border-radius: 500rem;
+}</style><style ng-transition="circuit-diagram">ng-progress{z-index:999999;pointer-events:none}ng-progress[fixed=true] .ng-progress-bar,ng-progress[fixed=true] .ng-spinner{position:fixed}ng-progress[fixed=true] .ng-spinner{top:15px}ng-progress[fixed=true][spinnerPosition=left] .ng-spinner{left:15px}ng-progress[fixed=true][spinnerPosition=right] .ng-spinner{right:15px}ng-progress[thick=true] .ng-spinner-icon{width:24px;height:24px;border-width:3px}ng-progress[thick=true] .ng-bar-placeholder{height:3px!important}ng-progress[dir='ltr+'] .ng-meteor,ng-progress[dir=ltr-] .ng-meteor{-webkit-transform:rotate(3deg);transform:rotate(3deg)}ng-progress[dir='ltr+'][thick=true] .ng-meteor,ng-progress[dir=ltr-][thick=true] .ng-meteor{-webkit-transform:rotate(4deg);transform:rotate(4deg)}ng-progress[dir='ltr+'] .ng-bar,ng-progress[dir='rtl+'] .ng-bar{margin-left:-100%}ng-progress[dir='ltr+'] .ng-meteor,ng-progress[dir='rtl+'] .ng-meteor{right:0}ng-progress[dir='ltr+'] .ng-meteor,ng-progress[dir=rtl-] .ng-meteor{top:-3px}ng-progress[dir='ltr+'][thick=true] .ng-meteor,ng-progress[dir=rtl-][thick=true] .ng-meteor{top:-4px}ng-progress[dir='rtl+'] .ng-meteor,ng-progress[dir=ltr-] .ng-meteor{bottom:-3px}ng-progress[dir='rtl+'][thick=true] .ng-meteor,ng-progress[dir=ltr-][thick=true] .ng-meteor{bottom:-4px}ng-progress[dir='rtl+'] .ng-bar-placeholder,ng-progress[dir=ltr-] .ng-bar-placeholder{-webkit-transform:rotate(180deg);transform:rotate(180deg)}ng-progress[dir='rtl+'] .ng-spinner-icon,ng-progress[dir=ltr-] .ng-spinner-icon{animation-direction:reverse}ng-progress[dir='rtl+'] .ng-meteor,ng-progress[dir=rtl-] .ng-meteor{-webkit-transform:rotate(-3deg);transform:rotate(-3deg)}ng-progress[dir='rtl+'][thick=true] .ng-meteor,ng-progress[dir=rtl-][thick=true] .ng-meteor{-webkit-transform:rotate(-4deg);transform:rotate(-4deg)}ng-progress[spinnerPosition=left] .ng-spinner{left:10px}ng-progress[spinnerPosition=right] .ng-spinner{right:10px}.ng-progress-bar{position:relative;z-index:999999;top:0;left:0;width:100%;zoom:1;opacity:0}.ng-progress-bar.-active{opacity:1;transition:none}.ng-bar-placeholder{position:absolute;height:2px;width:100%}.ng-bar{width:100%;height:100%;-webkit-transform:translate(-100%,0,0);transform:translate(-100%,0,0)}.ng-meteor{display:block;position:absolute;width:100px;height:100%;opacity:1}.ng-spinner{position:absolute;display:block;z-index:1031;top:10px}.ng-spinner-icon{width:18px;height:18px;box-sizing:border-box;-webkit-animation:.4s linear infinite spinner-animation;animation:.4s linear infinite spinner-animation;border:2px solid transparent;border-radius:50%}@-webkit-keyframes spinner-animation{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes spinner-animation{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}</style><style ng-transition="circuit-diagram">.app-loading[_ngcontent-sc4] {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center; }
+
+.app-loading[_ngcontent-sc4]   h4[_ngcontent-sc4] {
+  font-size: 16px; }</style><style ng-transition="circuit-diagram">.la-ball-scale-multiple[_ngcontent-sc5], .la-ball-scale-multiple[_ngcontent-sc5]    > div[_ngcontent-sc5] {
+  position: relative;
+  box-sizing: border-box;
+}
+.la-ball-scale-multiple[_ngcontent-sc5] {
+  display: block;
+  font-size: 0;
+  color: #3f92d2;
+}
+.la-ball-scale-multiple.la-dark[_ngcontent-sc5] {
+  color: #333;
+}
+.la-ball-scale-multiple[_ngcontent-sc5]    > div[_ngcontent-sc5] {
+  display: inline-block;
+  float: none;
+  background-color: currentColor;
+  border: 0 solid currentColor;
+}
+.la-ball-scale-multiple[_ngcontent-sc5] {
+  width: 128px;
+  height: 128px;
+}
+.la-ball-scale-multiple[_ngcontent-sc5]    > div[_ngcontent-sc5] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 128px;
+  height: 128px;
+  border-radius: 100%;
+  opacity: 0;
+  -webkit-animation: ball-scale-multiple 1s 0s linear infinite;
+          animation: ball-scale-multiple 1s 0s linear infinite;
+}
+.la-ball-scale-multiple[_ngcontent-sc5]    > div[_ngcontent-sc5]:nth-child(2) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+.la-ball-scale-multiple[_ngcontent-sc5]    > div[_ngcontent-sc5]:nth-child(3) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+.la-ball-scale-multiple.la-sm[_ngcontent-sc5] {
+  width: 16px;
+  height: 16px;
+}
+.la-ball-scale-multiple.la-sm[_ngcontent-sc5]    > div[_ngcontent-sc5] {
+  width: 16px;
+  height: 16px;
+}
+.la-ball-scale-multiple.la-2x[_ngcontent-sc5] {
+  width: 64px;
+  height: 64px;
+}
+.la-ball-scale-multiple.la-2x[_ngcontent-sc5]    > div[_ngcontent-sc5] {
+  width: 64px;
+  height: 64px;
+}
+.la-ball-scale-multiple.la-3x[_ngcontent-sc5] {
+  width: 96px;
+  height: 96px;
+}
+.la-ball-scale-multiple.la-3x[_ngcontent-sc5]    > div[_ngcontent-sc5] {
+  width: 96px;
+  height: 96px;
+}
+@-webkit-keyframes ball-scale-multiple {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  5% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes ball-scale-multiple {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  5% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}</style><style>[_nghost-c0]{display:flex;height:100%}header[_ngcontent-c0]{padding:16px;position:fixed;top:0;left:0;width:100%;box-shadow:2px 2px 6px rgba(0,0,0,.5);z-index:10;line-height:2em}header[_ngcontent-c0]   .brand[_ngcontent-c0]:before{width:0}header[_ngcontent-c0]   .ui.fixed.menu[_ngcontent-c0]{position:fixed;z-index:101;margin:0;width:100%;top:0;left:0;right:auto;bottom:auto;background-color:#3f92d2;display:flex;border:1px solid rgba(34,36,38,.15);box-shadow:0 1px 2px 0 rgba(34,36,38,.15);white-space:nowrap}header[_ngcontent-c0]   .ui.fixed.menu[_ngcontent-c0]   .ui.item[_ngcontent-c0]{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}header[_ngcontent-c0]   .ui.fixed.menu[_ngcontent-c0]   .right.menu[_ngcontent-c0]{display:flex;margin-left:auto!important}header[_ngcontent-c0]   .ui.fixed.menu[_ngcontent-c0]   .item[_ngcontent-c0]{color:#fff;transition:none;display:flex;padding:.92857143em 1.14285714em;text-decoration:none}header[_ngcontent-c0]   .ui.fixed.menu[_ngcontent-c0]   .item[_ngcontent-c0]::before{width:0}header[_ngcontent-c0]   .ui.fixed.menu[_ngcontent-c0]   .item.active[_ngcontent-c0]{color:#fff;background-color:#75a4c8}header[_ngcontent-c0]   .ui.fixed.menu[_ngcontent-c0]   a.item[_ngcontent-c0]:hover{color:#3f92d2;background-color:#fff;cursor:pointer}header[_ngcontent-c0]   a[_ngcontent-c0]{color:#fff}header[_ngcontent-c0]   h1[_ngcontent-c0]{font-size:16pt;font-weight:400;display:inline-block;margin:0}main[_ngcontent-c0]{display:flex;flex-direction:column;flex:1}.content-host[_ngcontent-c0]{flex:1;display:flex}footer[_ngcontent-c0]{text-align:center;font-size:.8em}.user-popup[_ngcontent-c0]{width:180px;text-align:center}.user-popup[_ngcontent-c0]   p[_ngcontent-c0]{font-size:12px}.header-spacer[_ngcontent-c0]{height:55px}</style><style>.avatar.image[_ngcontent-c1]{margin-right:.25em;display:inline-block;width:2em;height:2em;border-radius:500rem}</style><style>ng-progress{z-index:999999;pointer-events:none}ng-progress[fixed=true] .ng-progress-bar,ng-progress[fixed=true] .ng-spinner{position:fixed}ng-progress[fixed=true] .ng-spinner{top:15px}ng-progress[fixed=true][spinnerPosition=left] .ng-spinner{left:15px}ng-progress[fixed=true][spinnerPosition=right] .ng-spinner{right:15px}ng-progress[thick=true] .ng-spinner-icon{width:24px;height:24px;border-width:3px}ng-progress[thick=true] .ng-bar-placeholder{height:3px!important}ng-progress[dir='ltr+'] .ng-meteor,ng-progress[dir=ltr-] .ng-meteor{-webkit-transform:rotate(3deg);transform:rotate(3deg)}ng-progress[dir='ltr+'][thick=true] .ng-meteor,ng-progress[dir=ltr-][thick=true] .ng-meteor{-webkit-transform:rotate(4deg);transform:rotate(4deg)}ng-progress[dir='ltr+'] .ng-bar,ng-progress[dir='rtl+'] .ng-bar{margin-left:-100%}ng-progress[dir='ltr+'] .ng-meteor,ng-progress[dir='rtl+'] .ng-meteor{right:0}ng-progress[dir='ltr+'] .ng-meteor,ng-progress[dir=rtl-] .ng-meteor{top:-3px}ng-progress[dir='ltr+'][thick=true] .ng-meteor,ng-progress[dir=rtl-][thick=true] .ng-meteor{top:-4px}ng-progress[dir='rtl+'] .ng-meteor,ng-progress[dir=ltr-] .ng-meteor{bottom:-3px}ng-progress[dir='rtl+'][thick=true] .ng-meteor,ng-progress[dir=ltr-][thick=true] .ng-meteor{bottom:-4px}ng-progress[dir='rtl+'] .ng-bar-placeholder,ng-progress[dir=ltr-] .ng-bar-placeholder{-webkit-transform:rotate(180deg);transform:rotate(180deg)}ng-progress[dir='rtl+'] .ng-spinner-icon,ng-progress[dir=ltr-] .ng-spinner-icon{animation-direction:reverse}ng-progress[dir='rtl+'] .ng-meteor,ng-progress[dir=rtl-] .ng-meteor{-webkit-transform:rotate(-3deg);transform:rotate(-3deg)}ng-progress[dir='rtl+'][thick=true] .ng-meteor,ng-progress[dir=rtl-][thick=true] .ng-meteor{-webkit-transform:rotate(-4deg);transform:rotate(-4deg)}ng-progress[spinnerPosition=left] .ng-spinner{left:10px}ng-progress[spinnerPosition=right] .ng-spinner{right:10px}.ng-progress-bar{position:relative;z-index:999999;top:0;left:0;width:100%;zoom:1;opacity:0}.ng-progress-bar.-active{opacity:1;transition:none}.ng-bar-placeholder{position:absolute;height:2px;width:100%}.ng-bar{width:100%;height:100%;-webkit-transform:translate(-100%,0,0);transform:translate(-100%,0,0)}.ng-meteor{display:block;position:absolute;width:100px;height:100%;opacity:1}.ng-spinner{position:absolute;display:block;z-index:1031;top:10px}.ng-spinner-icon{width:18px;height:18px;box-sizing:border-box;-webkit-animation:.4s linear infinite spinner-animation;animation:.4s linear infinite spinner-animation;border:2px solid transparent;border-radius:50%}@-webkit-keyframes spinner-animation{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes spinner-animation{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}</style><style>[_nghost-c4]{display:flex;flex:1;flex-direction:column}</style><style>[_nghost-c5]{display:flex;flex:1;flex-direction:column}</style><style>[_nghost-c6]{background-color:#eee}.toolbar[_ngcontent-c6]{display:grid;grid-template-columns:auto 1fr}.tray[_ngcontent-c6]{border-bottom:1px solid rgba(34,36,38,.1)}.ad[_ngcontent-c6]{max-height:25px;margin:8px 10px;white-space:nowrap}.document-tray[_ngcontent-c6]{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}@media (min-width:961px) and (max-width:1170px){.toolbar[_ngcontent-c6]{grid-template-columns:1fr}}@media (max-width:960px){.label[_ngcontent-c6]{display:none}}@media (max-width:630px){.toolbar[_ngcontent-c6]{grid-template-columns:1fr}}.toolbar[_ngcontent-c6]{background:0 0;border:none;box-shadow:none}.toolbar[_ngcontent-c6]   .label[_ngcontent-c6]{margin-left:5px}.toolbar[_ngcontent-c6]   .item[_ngcontent-c6]{display:inline-block;font-size:13px;padding:.92857143em 1.14285714em;margin-bottom:0;color:#000;border-right:1px solid rgba(34,36,38,.1);text-decoration:none;height:100%;min-width:43px}.toolbar[_ngcontent-c6]   .item.disabled[_ngcontent-c6], .toolbar[_ngcontent-c6]   .item.disabled[_ngcontent-c6]:hover{cursor:default!important;background-color:transparent!important;color:rgba(40,40,40,.3)!important}.toolbar[_ngcontent-c6]   .item[_ngcontent-c6]:hover{cursor:pointer;background:rgba(0,0,0,.03);color:rgba(0,0,0,.95);text-decoration:none}svg[_ngcontent-c6]{width:1.125em;height:1.125em}</style><style>[_nghost-c7]{position:relative;display:flex;flex:1;flex-direction:column}.hidden[_ngcontent-c7]{display:none!important}.layered-editor[_ngcontent-c7]{position:relative;display:block;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:100%;height:100%}.layered-editor[_ngcontent-c7] > *[_ngcontent-c7]{display:flex;position:absolute;top:0;left:0;bottom:0;right:0;cursor:default}app-property-editor[_ngcontent-c7]{position:fixed;-webkit-transform:translateY(-50%);transform:translateY(-50%);margin-left:10px;opacity:.95;transition:opacity .3s;image-rendering:-webkit-optimize-contrast}app-property-editor[_ngcontent-c7]:hover{opacity:1}app-component-selector[_ngcontent-c7]{display:block;position:absolute!important;border-radius:5px;width:220px;top:10px;left:10px;bottom:10px;overflow-y:hidden}app-layers[_ngcontent-c7]{position:absolute;bottom:10px;right:10px;width:220px;height:300px}app-status-bar[_ngcontent-c7]{position:absolute;bottom:10px;left:240px}</style><style>.svg-container[_ngcontent-c9]{width:100%;height:100%;position:relative;background-color:#fff;overflow:hidden}svg[_ngcontent-c9]{display:block;position:absolute;top:0;left:0;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-transform:translateZ(0);transform:translateZ(0)}  svg *{cursor:default;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}  svg #backgroundGrid{cursor:move}  svg .component .inner{transition:opacity .3s}  svg .component.highlighted .inner,   svg .component.moving .inner,   svg .component.selected .inner,   svg .component.sizing .inner{opacity:.5}  svg .size-handle{fill:#3f92d2;opacity:0}  svg .controls.sizing .size-handle{opacity:1}  svg .controls:hover .size-handle{cursor:move;pointer-events:all;opacity:1;transition:opacity .3s,-webkit-transform .3s;transition:transform .3s,opacity .3s;transition:transform .3s,opacity .3s,-webkit-transform .3s}  svg .controls.horizontal:hover .size-handle{cursor:ew-resize}  svg .controls.vertical:hover .size-handle{cursor:ns-resize}  svg .bbox{pointer-events:all;fill:none}  svg .controls.moving .size-handle{display:none}</style><style>.svg-container[_ngcontent-c10]{width:100%;height:100%;position:relative;overflow:hidden}svg[_ngcontent-c10]{background:0 0;width:2000px;height:2000px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;position:absolute}svg[_ngcontent-c10]     *{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}</style><style>[_nghost-c12] > div.menu[_ngcontent-c12]{width:100%!important;max-height:100%!important;display:flex;flex-direction:column}[_nghost-c12] > div.menu[_ngcontent-c12]   .components[_ngcontent-c12]{overflow:hidden;display:flex;flex-direction:column;flex:1;padding-bottom:0}[_nghost-c12] > div.menu[_ngcontent-c12]   .components-list[_ngcontent-c12]{overflow-y:auto}.component-search[_ngcontent-c12]{margin:5px 0 10px}  .component-search>div.ui.input{width:100%}  .component-search .results{width:100%!important}.sidebar-ad[_ngcontent-c12]{padding:9px!important}.leave-message[_ngcontent-c12]{font-size:.8rem;display:flex;flex-direction:row;align-items:center}a.item[_ngcontent-c12]{text-decoration:none}fa-icon[_ngcontent-c12]{margin-right:.5rem}.new-component[_ngcontent-c12]   fa-icon[_ngcontent-c12]{margin-left:.2rem}.card-body[_ngcontent-c12]   .menu[_ngcontent-c12]{margin:0 -15px}.menu[_ngcontent-c12]   .item[_ngcontent-c12]{display:block;background:0 0;border-top:none;border-right:none;padding:.5em 1.2rem;font-size:.85714286em;color:rgba(0,0,0,.5);line-height:1}.menu[_ngcontent-c12]   .item.active[_ngcontent-c12]{background-color:transparent;font-weight:700;color:rgba(0,0,0,.95)}.menu[_ngcontent-c12]   .item[_ngcontent-c12]:hover{cursor:pointer;color:rgba(0,0,0,.85)}</style><style>.card[_ngcontent-c13]{width:100%;height:100%}h5[_ngcontent-c13]{font-size:1rem}.list-group[_ngcontent-c13]{flex:1;overflow-x:hidden;overflow-y:scroll;display:initial}.list-group-item[_ngcontent-c13]{display:flex;padding:.5rem 1.25rem;font-size:.85714286em;cursor:pointer;white-space:nowrap}.list-group-item[_ngcontent-c13]:last-child{border-bottom:0}.list-group-item.selected[_ngcontent-c13]{background-color:#3f92d2;color:#fff;z-index:2;border-top:1px solid rgba(200,200,200,.5);border-bottom:1px solid rgba(200,200,200,.5)}.list-group-item.active-layer[_ngcontent-c13]{font-weight:600}.list-group-item[_ngcontent-c13]   fa-icon[_ngcontent-c13]{margin-right:.5em}.layer-content[_ngcontent-c13]{display:flex;overflow:hidden;flex:1}.layer-content[_ngcontent-c13]   .layer-name[_ngcontent-c13]{flex:1;overflow:hidden;text-overflow:ellipsis}.layer-expand[_ngcontent-c13]{width:23px;text-align:center;pointer-events:none}a.layer-expand[_ngcontent-c13]{cursor:pointer;pointer-events:initial}.indent-1[_ngcontent-c13]{width:10px}app-colour-picker[_ngcontent-c13]{display:inline-block;margin-left:5px;align-self:center}</style><style>.card-body[_ngcontent-c14]{padding:.5rem;font-size:.8rem}</style><style>.colour-indicator[_ngcontent-c15]{width:12px;height:12px;border-radius:6px;border:1px solid #ccc}ul.list-group[_ngcontent-c15]{margin:-.5rem -.75rem;border-radius:5px;overflow:hidden}.selected-indicator[_ngcontent-c15]{display:inline-block;width:15px;margin-right:5px}li[_ngcontent-c15]{border:0;padding:.5rem 1rem}li.selected[_ngcontent-c15]{color:#fff;background-color:var(--primary)}li[_ngcontent-c15]:hover{background-color:var(--secondary);color:#fff;cursor:pointer}li[_ngcontent-c15]:not(.selected)   .selected-indicator[_ngcontent-c15]   fa-icon[_ngcontent-c15]{display:none}</style><style>.card[_ngcontent-c11]{width:290px}.card-header[_ngcontent-c11]   h5[_ngcontent-c11]{display:inline;font-size:1.15rem}.card-header[_ngcontent-c11]   .actions[_ngcontent-c11]{float:right}.properties[_ngcontent-c11]{max-height:400px}.properties.restricted[_ngcontent-c11]{overflow-y:auto}.details-link[_ngcontent-c11]{float:right}.btn-group[_ngcontent-c11]   .btn[_ngcontent-c11]{padding:.75em 1em}</style><style>ngb-popover-window.bs-popover-bottom .arrow,ngb-popover-window.bs-popover-top .arrow{left:50%;margin-left:-5px}ngb-popover-window.bs-popover-bottom-left .arrow,ngb-popover-window.bs-popover-top-left .arrow{left:2em}ngb-popover-window.bs-popover-bottom-right .arrow,ngb-popover-window.bs-popover-top-right .arrow{left:auto;right:2em}ngb-popover-window.bs-popover-left .arrow,ngb-popover-window.bs-popover-right .arrow{top:50%;margin-top:-5px}ngb-popover-window.bs-popover-left-top .arrow,ngb-popover-window.bs-popover-right-top .arrow{top:.7em}ngb-popover-window.bs-popover-left-bottom .arrow,ngb-popover-window.bs-popover-right-bottom .arrow{top:auto;bottom:.7em}</style><style>[_nghost-c17]{display:block;width:100%}.header[_ngcontent-c17] > .container[_ngcontent-c17]{display:flex;flex-direction:row}.header[_ngcontent-c17] > .container[_ngcontent-c17] > [_ngcontent-c17]:first-child{align-self:center;margin-right:15px}.header[_ngcontent-c17]   h4[_ngcontent-c17], .header[_ngcontent-c17]   p[_ngcontent-c17]{margin-bottom:2px}.container[_ngcontent-c17]{margin-right:auto;margin-left:auto;text-align:left}@media (min-width:576px){.container[_ngcontent-c17]{max-width:540px}}@media (min-width:768px){.container[_ngcontent-c17]{max-width:720px}}@media (min-width:992px){.container[_ngcontent-c17]{max-width:960px}}@media (min-width:1200px){.container[_ngcontent-c17]{max-width:1140px}}.content[_ngcontent-c17]{overflow:auto;text-align:center;padding:25px 0;border-bottom:1px solid #e7e7e7}.content[_ngcontent-c17]:last-child{margin-bottom:25px}.content.content-section-a[_ngcontent-c17]{background-color:#f8f8f8}.img-border[_ngcontent-c17]{display:inline-block;border:1px solid rgba(0,0,0,.125);background-color:#fff}.text-center[_ngcontent-c17]{text-align:center}.sim-display-container[_ngcontent-c17]{margin-bottom:25px}</style><style>.loading[_ngcontent-c18]{position:relative}.loading[_ngcontent-c18]   app-spinner[_ngcontent-c18]{position:absolute;top:50%;left:50%;margin-left:-64px;margin-top:-64px}.loading[_ngcontent-c18], img[_ngcontent-c18]{min-width:500px;min-height:300px}img[_ngcontent-c18]{-o-object-fit:none;object-fit:none}</style><style>.la-ball-scale-multiple[_ngcontent-c19], .la-ball-scale-multiple[_ngcontent-c19] > div[_ngcontent-c19]{position:relative;box-sizing:border-box}.la-ball-scale-multiple[_ngcontent-c19]{display:block;font-size:0;color:#3f92d2;width:128px;height:128px}.la-ball-scale-multiple.la-dark[_ngcontent-c19]{color:#333}.la-ball-scale-multiple[_ngcontent-c19] > div[_ngcontent-c19]{display:inline-block;float:none;background-color:currentColor;border:0 solid currentColor;position:absolute;top:0;left:0;width:128px;height:128px;border-radius:100%;opacity:0;-webkit-animation:1s linear infinite ball-scale-multiple;animation:1s linear infinite ball-scale-multiple}.la-ball-scale-multiple[_ngcontent-c19] > div[_ngcontent-c19]:nth-child(2){-webkit-animation-delay:.2s;animation-delay:.2s}.la-ball-scale-multiple[_ngcontent-c19] > div[_ngcontent-c19]:nth-child(3){-webkit-animation-delay:.4s;animation-delay:.4s}.la-ball-scale-multiple.la-sm[_ngcontent-c19], .la-ball-scale-multiple.la-sm[_ngcontent-c19] > div[_ngcontent-c19]{width:16px;height:16px}.la-ball-scale-multiple.la-2x[_ngcontent-c19], .la-ball-scale-multiple.la-2x[_ngcontent-c19] > div[_ngcontent-c19]{width:64px;height:64px}.la-ball-scale-multiple.la-3x[_ngcontent-c19], .la-ball-scale-multiple.la-3x[_ngcontent-c19] > div[_ngcontent-c19]{width:96px;height:96px}@-webkit-keyframes ball-scale-multiple{0%{opacity:0;-webkit-transform:scale(0);transform:scale(0)}5%{opacity:.75}100%{opacity:0;-webkit-transform:scale(1);transform:scale(1)}}@keyframes ball-scale-multiple{0%{opacity:0;-webkit-transform:scale(0);transform:scale(0)}5%{opacity:.75}100%{opacity:0;-webkit-transform:scale(1);transform:scale(1)}}</style><style>.ngb-highlight{font-weight:700}</style></head>
+<body>
+  <app-root _nghost-sc0="" ng-version="7.0.0" _nghost-c0=""><header _ngcontent-c0=""><div _ngcontent-c0="" class="ui fixed menu"><div _ngcontent-c0="" class="header item brand"><h1 _ngcontent-c0="">Circuit Diagram</h1></div><div _ngcontent-c0="" class="right menu"><a _ngcontent-c0="" class="ui item" href="https://www.circuit-diagram.org/"> Home </a><a _ngcontent-c0="" class="ui item" href="https://www.circuit-diagram.org/news"> News </a><div _ngcontent-c0="" class="ui item active"> Editor </div><a _ngcontent-c0="" class="ui item" href="https://www.circuit-diagram.org/downloads"> Download </a><a _ngcontent-c0="" class="ui item" href="https://www.circuit-diagram.org/components"> Components </a><a _ngcontent-c0="" class="ui item" href="https://www.circuit-diagram.org/circuits"> Circuits </a><a _ngcontent-c0="" class="ui item" href="https://www.circuit-diagram.org/contact"> Contact </a><a _ngcontent-c0="" class="ui item" placement="bottom-right"><app-user-sign-in-status _ngcontent-c0="" _nghost-c1=""><!----><!----><!----><fa-icon _ngcontent-c1="" class="ng-fa-icon"><svg aria-hidden="true" data-prefix="fas" data-icon="user-circle" class="svg-inline--fa fa-user-circle fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 96c48.6 0 88 39.4 88 88s-39.4 88-88 88-88-39.4-88-88 39.4-88 88-88zm0 344c-58.7 0-111.3-26.6-146.5-68.2 18.8-35.4 55.6-59.8 98.5-59.8 2.4 0 4.8.4 7.1 1.1 13 4.2 26.6 6.9 40.9 6.9 14.3 0 28-2.7 40.9-6.9 2.3-.7 4.7-1.1 7.1-1.1 42.9 0 79.7 24.4 98.5 59.8C359.3 421.4 306.7 448 248 448z"></path></svg></fa-icon></app-user-sign-in-status></a></div></div></header><main _ngcontent-c0=""><div _ngcontent-c0="" class="header-spacer"></div><div _ngcontent-c0="" class="content-host"><router-outlet _ngcontent-c0=""></router-outlet><ng-component _nghost-c4=""><app-editor-keybindings _ngcontent-c4="" _nghost-c5=""><app-document-toolbar _ngcontent-c4="" _nghost-c6=""><div _ngcontent-c6="" class="toolbar"><div _ngcontent-c6="" class="tray document-tray"><a _ngcontent-c6="" class="item" ngbpopover="Create a new, blank circuit." placement="bottom-left" triggers="mouseenter:mouseleave"><fa-icon _ngcontent-c6="" class="ng-fa-icon"><svg aria-hidden="true" data-prefix="far" data-icon="file" class="svg-inline--fa fa-file fa-w-12" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M369.9 97.9L286 14C277 5 264.8-.1 252.1-.1H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V131.9c0-12.7-5.1-25-14.1-34zM332.1 128H256V51.9l76.1 76.1zM48 464V48h160v104c0 13.3 10.7 24 24 24h104v288H48z"></path></svg></fa-icon><span _ngcontent-c6="" class="label">New</span></a><label _ngcontent-c6="" class="item link" for="openFile" ngbpopover="Open a saved circuit from your computer." placement="bottom-left" triggers="mouseenter:mouseleave"><fa-icon _ngcontent-c6="" class="ng-fa-icon"><svg aria-hidden="true" data-prefix="far" data-icon="folder-open" class="svg-inline--fa fa-folder-open fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M527.943 224H480v-48c0-26.51-21.49-48-48-48H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h400a48.001 48.001 0 0 0 40.704-22.56l79.942-128c19.948-31.917-3.038-73.44-40.703-73.44zM54 112h134.118l64 64H426a6 6 0 0 1 6 6v42H152a48 48 0 0 0-41.098 23.202L48 351.449V117.993A5.993 5.993 0 0 1 54 112zm394 288H72l77.234-128H528l-80 128z"></path></svg></fa-icon><span _ngcontent-c6="" class="label">Open</span><input _ngcontent-c6="" accept=".cddx" id="openFile" style="display: none" type="file"></label><a _ngcontent-c6="" class="item" ngbpopover="Save this circuit as a file on your computer." placement="bottom-left" triggers="mouseenter:mouseleave"><fa-icon _ngcontent-c6="" class="ng-fa-icon"><svg aria-hidden="true" data-prefix="far" data-icon="save" class="svg-inline--fa fa-save fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M433.941 129.941l-83.882-83.882A48 48 0 0 0 316.118 32H48C21.49 32 0 53.49 0 80v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V163.882a48 48 0 0 0-14.059-33.941zM272 80v80H144V80h128zm122 352H54a6 6 0 0 1-6-6V86a6 6 0 0 1 6-6h42v104c0 13.255 10.745 24 24 24h176c13.255 0 24-10.745 24-24V83.882l78.243 78.243a6 6 0 0 1 1.757 4.243V426a6 6 0 0 1-6 6zM224 232c-48.523 0-88 39.477-88 88s39.477 88 88 88 88-39.477 88-88-39.477-88-88-88zm0 128c-22.056 0-40-17.944-40-40s17.944-40 40-40 40 17.944 40 40-17.944 40-40 40z"></path></svg></fa-icon><span _ngcontent-c6="" class="label">Save</span></a><a _ngcontent-c6="" class="item" placement="bottom-left" triggers="mouseenter:mouseleave"><fa-icon _ngcontent-c6="" class="ng-fa-icon"><svg aria-hidden="true" data-prefix="fas" data-icon="undo" class="svg-inline--fa fa-undo fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M212.333 224.333H12c-6.627 0-12-5.373-12-12V12C0 5.373 5.373 0 12 0h48c6.627 0 12 5.373 12 12v78.112C117.773 39.279 184.26 7.47 258.175 8.007c136.906.994 246.448 111.623 246.157 248.532C504.041 393.258 393.12 504 256.333 504c-64.089 0-122.496-24.313-166.51-64.215-5.099-4.622-5.334-12.554-.467-17.42l33.967-33.967c4.474-4.474 11.662-4.717 16.401-.525C170.76 415.336 211.58 432 256.333 432c97.268 0 176-78.716 176-176 0-97.267-78.716-176-176-176-58.496 0-110.28 28.476-142.274 72.333h98.274c6.627 0 12 5.373 12 12v48c0 6.627-5.373 12-12 12z"></path></svg></fa-icon><span _ngcontent-c6="" class="label">Undo</span></a><a _ngcontent-c6="" class="item" placement="bottom-left" triggers="mouseenter:mouseleave"><fa-icon _ngcontent-c6="" class="ng-fa-icon"><svg aria-hidden="true" data-prefix="fas" data-icon="redo" class="svg-inline--fa fa-redo fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M500.333 0h-47.411c-6.853 0-12.314 5.729-11.986 12.574l3.966 82.759C399.416 41.899 331.672 8 256.001 8 119.34 8 7.899 119.526 8 256.187 8.101 393.068 119.096 504 256 504c63.926 0 122.202-24.187 166.178-63.908 5.113-4.618 5.354-12.561.482-17.433l-33.971-33.971c-4.466-4.466-11.64-4.717-16.38-.543C341.308 415.448 300.606 432 256 432c-97.267 0-176-78.716-176-176 0-97.267 78.716-176 176-176 60.892 0 114.506 30.858 146.099 77.8l-101.525-4.865c-6.845-.328-12.574 5.133-12.574 11.986v47.411c0 6.627 5.373 12 12 12h200.333c6.627 0 12-5.373 12-12V12c0-6.627-5.373-12-12-12z"></path></svg></fa-icon><span _ngcontent-c6="" class="label">Redo</span></a><a _ngcontent-c6="" class="item" ngbpopover="Download this circuit as a PNG image." placement="bottom-left" triggers="mouseenter:mouseleave"><fa-icon _ngcontent-c6="" class="ng-fa-icon"><svg aria-hidden="true" data-prefix="fas" data-icon="download" class="svg-inline--fa fa-download fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z"></path></svg></fa-icon><span _ngcontent-c6="" class="label">Download PNG</span></a><a _ngcontent-c6="" class="item" ngbpopover="Download this circuit as an SVG image." placement="bottom-left" triggers="mouseenter:mouseleave"><fa-icon _ngcontent-c6="" class="ng-fa-icon"><svg aria-hidden="true" data-prefix="fas" data-icon="download" class="svg-inline--fa fa-download fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z"></path></svg></fa-icon><span _ngcontent-c6="" class="label">Download SVG</span></a><a _ngcontent-c6="" class="item" placement="bottom-left"><fa-icon _ngcontent-c6="" class="ng-fa-icon"><svg aria-hidden="true" data-prefix="fas" data-icon="link" class="svg-inline--fa fa-link fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"></path></svg></fa-icon><span _ngcontent-c6="" class="label">Get Link</span></a><a _ngcontent-c6="" class="item" href="https://www.circuit-diagram.org/editor/publish"><fa-icon _ngcontent-c6="" class="ng-fa-icon"><svg aria-hidden="true" data-prefix="fas" data-icon="link" class="svg-inline--fa fa-link fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"></path></svg></fa-icon><span _ngcontent-c6="" class="label">Publish</span></a><a _ngcontent-c6="" class="item" ngbpopover="Simulate this circuit (BETA)" placement="bottom-left" triggers="mouseenter:mouseleave" href="https://www.circuit-diagram.org/editor/simulation"><fa-icon _ngcontent-c6="" class="ng-fa-icon"><svg aria-hidden="true" data-prefix="fas" data-icon="play" class="svg-inline--fa fa-play fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"></path></svg></fa-icon><span _ngcontent-c6="" class="label">Simulate</span></a></div><div _ngcontent-c6="" class="tray ad-tray"><div _ngcontent-c6="" class="ad"><ng-adsense _ngcontent-c6=""><ins class="adsbygoogle" data-ad-client="ca-pub-1867562311950591" data-ad-slot="4804972144" data-ad-format="link" data-ad-region="page-59311" style="display: block; height: 25px;"></ins></ng-adsense></div></div></div><!----><!----><!----></app-document-toolbar><app-circuit-editor _ngcontent-c4="" _nghost-c7=""><div _ngcontent-c7="" class="layered-editor" focusable="true"><app-circuit-display _ngcontent-c7="" _nghost-c9=""><div _ngcontent-c9="" class="svg-container"><svg _ngcontent-c9="" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="2000" height="2000" viewBox="-500 -92 2000 2000">
+  <rect id="backgroundGrid" width="10000" height="10000" x="-2000" y="-2000" fill="url(#grid)"></rect><g id="SvgjsG28582" class="component" transform="matrix(1,0,0,1,630,260)"><g id="SvgjsG28583" class="inner"><path id="SvgjsPath28584" d="M 50,0 L 31,0" stroke="#000000" stroke-width="2" fill="transparent" style="stroke-linecap: square;"></path><path id="SvgjsPath28585" d="M 19,0 L 0,0" stroke="#000000" stroke-width="2" fill="transparent" style="stroke-linecap: square;"></path><rect id="SvgjsRect28586" width="4" height="28" transform="matrix(1,0,0,1,27,-14)" stroke="#000000" stroke-width="2" fill="transparent"></rect><rect id="SvgjsRect28587" width="4" height="28" transform="matrix(1,0,0,1,19,-14)" stroke="#000000" stroke-width="2"></rect><path id="SvgjsPath28588" d="M 32,0  m -8,-12 l 6,0 m -3,-3 l 0,7" stroke="#000000" stroke-width="2" fill="transparent" style="stroke-linecap: square; transform-origin: 32px 0px; transform: scale(-1, 1);"></path><text id="SvgjsText28589" font-family="Helvetica, Arial, sans-serif" x="25" y="-8" dy="-14" style="text-anchor: middle;"><tspan id="SvgjsTspan28590" style="font-size: 11px;">100 µF</tspan></text></g></g><g id="SvgjsG28591" class="component" transform="matrix(1,0,0,1,490,260)"><g id="SvgjsG28592" class="inner"><path id="SvgjsPath28593" d="M 0,0 L 19,0" stroke="#000000" stroke-width="2" fill="transparent" style="stroke-linecap: square;"></path><path id="SvgjsPath28594" d="M 31,0 L 50,0" stroke="#000000" stroke-width="2" fill="transparent" style="stroke-linecap: square;"></path><rect id="SvgjsRect28595" width="4" height="28" transform="matrix(1,0,0,1,19,-14)" stroke="#000000" stroke-width="2" fill="transparent"></rect><rect id="SvgjsRect28596" width="4" height="28" transform="matrix(1,0,0,1,27,-14)" stroke="#000000" stroke-width="2"></rect><path id="SvgjsPath28597" d="M 18,0  m -8,-12 l 6,0 m -3,-3 l 0,7" stroke="#000000" stroke-width="2" fill="transparent" style="stroke-linecap: square; transform-origin: 18px 0px;"></path><text id="SvgjsText28598" font-family="Helvetica, Arial, sans-serif" x="25" y="-8" dy="-14" style="text-anchor: middle;"><tspan id="SvgjsTspan28599" style="font-size: 11px;">100 µF</tspan></text></g></g><g id="SvgjsG28600" class="component" transform="matrix(1,0,0,1,490,260)"><g id="SvgjsG28601" class="inner"><path id="SvgjsPath28602" d="M 0,0 L 0,37" stroke="#000000" stroke-width="2" fill="transparent" style="stroke-linecap: square;"></path><path id="SvgjsPath28603" d="M 0,63 L 0,90" stroke="#000000" stroke-width="2" fill="transparent" style="stroke-linecap: square;"></path><path id="SvgjsPath28604" d="M 40,50 L 14,50" stroke="#000000" stroke-width="2" fill="transparent" style="stroke-linecap: square;"></path><path id="SvgjsPath28605" d="M 14.5,42 L 14.5,58" stroke="#000000" stroke-width="3" fill="transparent" style="stroke-linecap: square;"></path><path id="SvgjsPath28606" d="M 0,37 L 14.5,46" stroke="#000000" stroke-width="2" fill="transparent" style="stroke-linecap: square;"></path><path id="SvgjsPath28607" d="M 14.5,54 L 0,63" stroke="#000000" stroke-width="2" fill="transparent" style="stroke-linecap: square;"></path><ellipse id="SvgjsEllipse28608" rx="16" ry="16" cx="10" cy="50" stroke="#000000" stroke-width="2" fill="transparent"></ellipse><path id="SvgjsPath28609" d="M 8,57  l 4,-2 l 1,7 l -6,-4 l 2,-1" stroke="#000000" stroke-width="2" style="stroke-linecap: square; transform-origin: 8px 57px; transform: scale(-1, 1);"></path></g></g><g id="SvgjsG28610" class="component" transform="matrix(1,0,0,1,680,260)"><g id="SvgjsG28611" class="inner"><path id="SvgjsPath28612" d="M 0,0 L 0,37" stroke="#000000" stroke-width="2" fill="transparent" style="stroke-linecap: square;"></path><path id="SvgjsPath28613" d="M 0,63 L 0,90" stroke="#000000" stroke-width="2" fill="transparent" style="stroke-linecap: square;"></path><path id="SvgjsPath28614" d="M -40,50 L -14,50" stroke="#000000" stroke-width="2" fill="transparent" style="stroke-linecap: square;"></path><path id="SvgjsPath28615" d="M -14.5,42 L -14.5,58" stroke="#000000" stroke-width="3" fill="transparent" style="stroke-linecap: square;"></path><path id="SvgjsPath28616" d="M 0,37 L -14.5,46" stroke="#000000" stroke-width="2" fill="transparent" style="stroke-linecap: square;"></path><path id="SvgjsPath28617" d="M -14.5,54 L 0,63" stroke="#000000" stroke-width="2" fill="transparent" style="stroke-linecap: square;"></path><ellipse id="SvgjsEllipse28618" rx="16" ry="16" cx="-10" cy="50" stroke="#000000" stroke-width="2" fill="transparent"></ellipse><path id="SvgjsPath28619" d="M -8,57  l 4,-2 l 1,7 l -6,-4 l 2,-1" stroke="#000000" stroke-width="2" style="stroke-linecap: square; transform-origin: -8px 57px;"></path></g></g><g id="SvgjsG28620" class="component" transform="matrix(1,0,0,1,620,100)"><g id="SvgjsG28621" class="inner"><path id="SvgjsPath28622" d="M 0,0 L 0,85" stroke="#000000" stroke-width="2" fill="transparent" style="stroke-linecap: square;"></path><rect id="SvgjsRect28623" width="16" height="40" transform="matrix(1,0,0,1,-8,85)" stroke="#000000" stroke-width="2" fill="transparent"></rect><path id="SvgjsPath28624" d="M 0,125 L 0,210" stroke="#000000" stroke-width="2" fill="transparent" style="stroke-linecap: square;"></path><text id="SvgjsText28625" font-family="Helvetica, Arial, sans-serif" x="-14" y="115" dy="-7" style="text-anchor: end;"><tspan id="SvgjsTspan28626" style="font-size: 11px;">10 kΩ</tspan></text></g></g><g id="SvgjsG28627" class="component" transform="matrix(1,0,0,1,560,100)"><g id="SvgjsG28628" class="inner"><path id="SvgjsPath28629" d="M 0,0 L 0,40" stroke="#000000" stroke-width="2" fill="transparent" style="stroke-linecap: square;"></path><rect id="SvgjsRect28630" width="16" height="40" transform="matrix(1,0,0,1,-8,40)" stroke="#000000" stroke-width="2" fill="transparent"></rect><path id="SvgjsPath28631" d="M 0,80 L 0,120" stroke="#000000" stroke-width="2" fill="transparent" style="stroke-linecap: square;"></path><text id="SvgjsText28632" font-family="Helvetica, Arial, sans-serif" x="-14" y="70" dy="-7" style="text-anchor: end;"><tspan id="SvgjsTspan28633" style="font-size: 11px;">10 kΩ</tspan></text></g></g><g id="SvgjsG28634" class="component" transform="matrix(1,0,0,1,490,100)"><g id="SvgjsG28635" class="inner"><path id="SvgjsPath28636" d="M 0,0 L 0,25" stroke="#000000" stroke-width="2" fill="transparent" style="stroke-linecap: square;"></path><rect id="SvgjsRect28637" width="16" height="40" transform="matrix(1,0,0,1,-8,25)" stroke="#000000" stroke-width="2" fill="transparent"></rect><path id="SvgjsPath28638" d="M 0,65 L 0,90" stroke="#000000" stroke-width="2" fill="transparent" style="stroke-linecap: square;"></path><text id="SvgjsText28639" font-family="Helvetica, Arial, sans-serif" x="-14" y="55" dy="-7" style="text-anchor: end;"><tspan id="SvgjsTspan28640" style="font-size: 11px;">470 Ω</tspan></text></g></g><g id="SvgjsG28641" class="component" transform="matrix(1,0,0,1,680,100)"><g id="SvgjsG28642" class="inner"><path id="SvgjsPath28643" d="M 0,0 L 0,25" stroke="#000000" stroke-width="2" fill="transparent" style="stroke-linecap: square;"></path><rect id="SvgjsRect28644" width="16" height="40" transform="matrix(1,0,0,1,-8,25)" stroke="#000000" stroke-width="2" fill="transparent"></rect><path id="SvgjsPath28645" d="M 0,65 L 0,90" stroke="#000000" stroke-width="2" fill="transparent" style="stroke-linecap: square;"></path><text id="SvgjsText28646" font-family="Helvetica, Arial, sans-serif" x="-14" y="55" dy="-7" style="text-anchor: end;"><tspan id="SvgjsTspan28647" style="font-size: 11px;">470 Ω</tspan></text></g></g><g id="SvgjsG28648" class="component" transform="matrix(1,0,0,1,680,190)"><g id="SvgjsG28649" class="inner"><path id="SvgjsPath28650" d="M 0,0 L 0,70" stroke="#000000" stroke-width="2" fill="transparent" style="stroke-linecap: square;"></path><path id="SvgjsPath28651" d="M 0,42  m -8,0 l 16,0 m -8,0 l 8,-15 l -16,0 l 8,15" stroke="#000000" stroke-width="2" fill="transparent" style="stroke-linecap: square; transform-origin: 0px 42px;"></path><path id="SvgjsPath28652" d="M 0,40  m 11,-2 l 8,8 m 1,1 l -2,-4 l -2,2 l 4,2 l -2,-4" stroke="#000000" stroke-width="2" fill="transparent" style="stroke-linecap: square; transform-origin: 0px 40px;"></path><path id="SvgjsPath28653" d="M 0,40  m 4,4 l 8,8 m 1,1 l -2,-4 l -2,2 l 4,2 l -2,-4" stroke="#000000" stroke-width="2" fill="transparent" style="stroke-linecap: square; transform-origin: 0px 40px;"></path></g></g><g id="SvgjsG28654" class="component" transform="matrix(1,0,0,1,490,190)"><g id="SvgjsG28655" class="inner"><path id="SvgjsPath28656" d="M 0,0 L 0,70" stroke="#000000" stroke-width="2" fill="transparent" style="stroke-linecap: square;"></path><path id="SvgjsPath28657" d="M 0,42  m -8,0 l 16,0 m -8,0 l 8,-15 l -16,0 l 8,15" stroke="#000000" stroke-width="2" fill="transparent" style="stroke-linecap: square; transform-origin: 0px 42px;"></path><path id="SvgjsPath28658" d="M 0,40  m 11,-2 l 8,8 m 1,1 l -2,-4 l -2,2 l 4,2 l -2,-4" stroke="#000000" stroke-width="2" fill="transparent" style="stroke-linecap: square; transform-origin: 0px 40px;"></path><path id="SvgjsPath28659" d="M 0,40  m 4,4 l 8,8 m 1,1 l -2,-4 l -2,2 l 4,2 l -2,-4" stroke="#000000" stroke-width="2" fill="transparent" style="stroke-linecap: square; transform-origin: 0px 40px;"></path></g></g><g id="SvgjsG28660" class="component" transform="matrix(1,0,0,1,730,100)"><g id="SvgjsG28661" class="inner"><path id="SvgjsPath28662" d="M 0,0 L 0,109" stroke="#000000" stroke-width="2" fill="transparent" style="stroke-linecap: square;"></path><ellipse id="SvgjsEllipse28663" rx="16" ry="16" cx="0" cy="125" stroke="#000000" stroke-width="2" fill="transparent"></ellipse><path id="SvgjsPath28664" d="M 0,141 L 0,250" stroke="#000000" stroke-width="2" fill="transparent" style="stroke-linecap: square;"></path><path id="SvgjsPath28665" d="M 0,125  m 0,-10 l 0,8 m -4,-4 l 8,0 m -8,14 l 8,0" stroke="#000000" stroke-width="2" fill="transparent" style="stroke-linecap: square; transform-origin: 0px 125px;"></path></g></g><g id="SvgjsG28666" class="component" transform="matrix(1,0,0,1,490,100)"><g id="SvgjsG28667" class="inner"><path id="SvgjsPath28668" d="M 0,0 L 240,0" stroke="#000000" stroke-width="2" fill="transparent" style="stroke-linecap: square;"></path></g></g><g id="SvgjsG28669" class="component" transform="matrix(1,0,0,1,490,350)"><g id="SvgjsG28670" class="inner"><path id="SvgjsPath28671" d="M 0,0 L 240,0" stroke="#000000" stroke-width="2" fill="transparent" style="stroke-linecap: square;"></path></g></g><g id="SvgjsG28672" class="connections"><ellipse id="SvgjsEllipse28673" rx="3" ry="3" cx="680" cy="260" stroke-width="0"></ellipse><ellipse id="SvgjsEllipse28674" rx="3" ry="3" cx="490" cy="260" stroke-width="0"></ellipse><ellipse id="SvgjsEllipse28675" rx="3" ry="3" cx="680" cy="350" stroke-width="0"></ellipse><ellipse id="SvgjsEllipse28676" rx="3" ry="3" cx="620" cy="100" stroke-width="0"></ellipse><ellipse id="SvgjsEllipse28677" rx="3" ry="3" cx="560" cy="100" stroke-width="0"></ellipse><ellipse id="SvgjsEllipse28678" rx="3" ry="3" cx="680" cy="100" stroke-width="0"></ellipse></g><defs>
+    <pattern id="smallGrid" width="10" height="10" patternUnits="userSpaceOnUse">
+      <path d="M 10 0 L 0 0 0 10" fill="none" stroke="lightgray" stroke-width="0.5"></path>
+    </pattern>
+    <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
+      <rect width="100" height="100" fill="url(#smallGrid)"></rect>
+      <path d="M 100 0 L 0 0 0 100" fill="none" stroke="lightgray" stroke-width="1"></path>
+    </pattern>
+  </defs><g id="SvgjsG28680" class="controls horizontal" transform="matrix(1,0,0,1,630,260)"><rect id="SvgjsRect28681" width="50" height="46" x="0" y="-32" class="bbox"></rect><ellipse id="SvgjsEllipse28682" rx="5" ry="5" cx="0" cy="0" class="size-handle"></ellipse><ellipse id="SvgjsEllipse28683" rx="5" ry="5" cx="50" cy="0" class="size-handle"></ellipse></g><g id="SvgjsG28684" class="controls horizontal" transform="matrix(1,0,0,1,490,260)"><rect id="SvgjsRect28685" width="50" height="46" x="0" y="-32" class="bbox"></rect><ellipse id="SvgjsEllipse28686" rx="5" ry="5" cx="0" cy="0" class="size-handle"></ellipse><ellipse id="SvgjsEllipse28687" rx="5" ry="5" cx="50" cy="0" class="size-handle"></ellipse></g><g id="SvgjsG28688" class="controls vertical" transform="matrix(1,0,0,1,490,260)"><rect id="SvgjsRect28689" width="46" height="90" x="-6" y="0" class="bbox"></rect><ellipse id="SvgjsEllipse28690" rx="5" ry="5" cx="0" cy="0" class="size-handle"></ellipse><ellipse id="SvgjsEllipse28691" rx="5" ry="5" cx="0" cy="90" class="size-handle"></ellipse></g><g id="SvgjsG28692" class="controls vertical" transform="matrix(1,0,0,1,680,260)"><rect id="SvgjsRect28693" width="46" height="90" x="-40" y="0" class="bbox"></rect><ellipse id="SvgjsEllipse28694" rx="5" ry="5" cx="0" cy="0" class="size-handle"></ellipse><ellipse id="SvgjsEllipse28695" rx="5" ry="5" cx="0" cy="90" class="size-handle"></ellipse></g><g id="SvgjsG28696" class="controls vertical" transform="matrix(1,0,0,1,620,100)"><rect id="SvgjsRect28697" width="51.234375" height="210" x="-43.234375" y="0" class="bbox"></rect><ellipse id="SvgjsEllipse28698" rx="5" ry="5" cx="0" cy="0" class="size-handle"></ellipse><ellipse id="SvgjsEllipse28699" rx="5" ry="5" cx="0" cy="210" class="size-handle"></ellipse></g><g id="SvgjsG28700" class="controls vertical" transform="matrix(1,0,0,1,560,100)"><rect id="SvgjsRect28701" width="51.234375" height="120" x="-43.234375" y="0" class="bbox"></rect><ellipse id="SvgjsEllipse28702" rx="5" ry="5" cx="0" cy="0" class="size-handle"></ellipse><ellipse id="SvgjsEllipse28703" rx="5" ry="5" cx="0" cy="120" class="size-handle"></ellipse></g><g id="SvgjsG28704" class="controls vertical" transform="matrix(1,0,0,1,490,100)"><rect id="SvgjsRect28705" width="51.84375" height="90" x="-43.84375" y="0" class="bbox"></rect><ellipse id="SvgjsEllipse28706" rx="5" ry="5" cx="0" cy="0" class="size-handle"></ellipse><ellipse id="SvgjsEllipse28707" rx="5" ry="5" cx="0" cy="90" class="size-handle"></ellipse></g><g id="SvgjsG28708" class="controls vertical" transform="matrix(1,0,0,1,680,100)"><rect id="SvgjsRect28709" width="51.84375" height="90" x="-43.84375" y="0" class="bbox"></rect><ellipse id="SvgjsEllipse28710" rx="5" ry="5" cx="0" cy="0" class="size-handle"></ellipse><ellipse id="SvgjsEllipse28711" rx="5" ry="5" cx="0" cy="90" class="size-handle"></ellipse></g><g id="SvgjsG28712" class="controls vertical" transform="matrix(1,0,0,1,680,190)"><rect id="SvgjsRect28713" width="28" height="70" x="-8" y="0" class="bbox"></rect><ellipse id="SvgjsEllipse28714" rx="5" ry="5" cx="0" cy="0" class="size-handle"></ellipse><ellipse id="SvgjsEllipse28715" rx="5" ry="5" cx="0" cy="70" class="size-handle"></ellipse></g><g id="SvgjsG28716" class="controls vertical" transform="matrix(1,0,0,1,490,190)"><rect id="SvgjsRect28717" width="28" height="70" x="-8" y="0" class="bbox"></rect><ellipse id="SvgjsEllipse28718" rx="5" ry="5" cx="0" cy="0" class="size-handle"></ellipse><ellipse id="SvgjsEllipse28719" rx="5" ry="5" cx="0" cy="70" class="size-handle"></ellipse></g><g id="SvgjsG28720" class="controls vertical" transform="matrix(1,0,0,1,730,100)"><rect id="SvgjsRect28721" width="32" height="250" x="-16" y="0" class="bbox"></rect><ellipse id="SvgjsEllipse28722" rx="5" ry="5" cx="0" cy="0" class="size-handle"></ellipse><ellipse id="SvgjsEllipse28723" rx="5" ry="5" cx="0" cy="250" class="size-handle"></ellipse></g><g id="SvgjsG28724" class="controls horizontal" transform="matrix(1,0,0,1,490,100)"><rect id="SvgjsRect28725" width="240" height="10" x="0" y="-5" class="bbox"></rect><ellipse id="SvgjsEllipse28726" rx="5" ry="5" cx="0" cy="0" class="size-handle"></ellipse><ellipse id="SvgjsEllipse28727" rx="5" ry="5" cx="240" cy="0" class="size-handle"></ellipse></g><g id="SvgjsG28728" class="controls horizontal" transform="matrix(1,0,0,1,490,350)"><rect id="SvgjsRect28729" width="240" height="10" x="0" y="-5" class="bbox"></rect><ellipse id="SvgjsEllipse28730" rx="5" ry="5" cx="0" cy="0" class="size-handle"></ellipse><ellipse id="SvgjsEllipse28731" rx="5" ry="5" cx="240" cy="0" class="size-handle"></ellipse></g></svg></div></app-circuit-display><app-component-placer _ngcontent-c7="" _nghost-c10="" class="hidden"><div _ngcontent-c10="" class="svg-container"><svg _ngcontent-c10="" height="2000" width="2000" viewBox="-500 -92 2000 2000" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"></svg></div></app-component-placer></div><!----><app-component-selector _ngcontent-c7="" _nghost-c12=""><div _ngcontent-c12="" class="card menu"><div _ngcontent-c12="" class="card-body"><h6 _ngcontent-c12="" class="header">Tools</h6><div _ngcontent-c12="" class="menu"><a _ngcontent-c12="" class="item" container="body" placement="right" triggers="mouseenter:mouseleave"> Select </a><a _ngcontent-c12="" class="item active" container="body" placement="right" triggers="mouseenter:mouseleave"> Single select </a></div></div><hr _ngcontent-c12=""><div _ngcontent-c12="" class="card-body components"><h6 _ngcontent-c12="" class="header">Components</h6><input _ngcontent-c12="" aria-multiline="false" autocapitalize="off" autocorrect="off" class="form-control component-search" container="body" id="typeahead-basic" placeholder="Search" role="combobox" type="text" autocomplete="off" aria-autocomplete="list" aria-expanded="false"><div _ngcontent-c12="" class="menu components-list"><!----><a _ngcontent-c12="" class="item" draggable="true">Wire</a><a _ngcontent-c12="" class="item" draggable="true">Resistor</a><a _ngcontent-c12="" class="item" draggable="true">Variable Resistor</a><a _ngcontent-c12="" class="item" draggable="true">Potentiometer</a><a _ngcontent-c12="" class="item" draggable="true">Thermistor</a><a _ngcontent-c12="" class="item" draggable="true">LDR</a><a _ngcontent-c12="" class="item" draggable="true">US Resistor</a><a _ngcontent-c12="" class="item" draggable="true">Rail</a><a _ngcontent-c12="" class="item" draggable="true">Rail2</a><a _ngcontent-c12="" class="item" draggable="true">Ground</a><a _ngcontent-c12="" class="item" draggable="true">Earth</a><a _ngcontent-c12="" class="item" draggable="true">Cell</a><a _ngcontent-c12="" class="item" draggable="true">Battery</a><a _ngcontent-c12="" class="item" draggable="true">AC Source</a><a _ngcontent-c12="" class="item" draggable="true">DC Source</a><a _ngcontent-c12="" class="item" draggable="true">Current Source</a><a _ngcontent-c12="" class="item" draggable="true">Capacitor</a><a _ngcontent-c12="" class="item" draggable="true">Variable Capacitor</a><a _ngcontent-c12="" class="item" draggable="true">Trimmer Capacitor</a><a _ngcontent-c12="" class="item" draggable="true">Polarised Capacitor</a><a _ngcontent-c12="" class="item" draggable="true">Push Switch</a><a _ngcontent-c12="" class="item" draggable="true">Toggle Switch</a><a _ngcontent-c12="" class="item" draggable="true">Analogue Switch</a><a _ngcontent-c12="" class="item" draggable="true">Push to Break Switch</a><a _ngcontent-c12="" class="item" draggable="true">Changeover Switch</a><a _ngcontent-c12="" class="item" draggable="true">Buzzer</a><a _ngcontent-c12="" class="item" draggable="true">Crystal</a><a _ngcontent-c12="" class="item" draggable="true">Counter (4-bit)</a><a _ngcontent-c12="" class="item" draggable="true">Demultiplexer</a><a _ngcontent-c12="" class="item" draggable="true">D Flip-Flop</a><a _ngcontent-c12="" class="item" draggable="true">Diode</a><a _ngcontent-c12="" class="item" draggable="true">Zener Diode</a><a _ngcontent-c12="" class="item" draggable="true">LED</a><a _ngcontent-c12="" class="item" draggable="true">Photodiode</a><a _ngcontent-c12="" class="item" draggable="true">External Input</a><a _ngcontent-c12="" class="item" draggable="true">External Output</a><a _ngcontent-c12="" class="item" draggable="true">Fuse</a><a _ngcontent-c12="" class="item" draggable="true">Heater</a><a _ngcontent-c12="" class="item" draggable="true">Inductor</a><a _ngcontent-c12="" class="item" draggable="true">Integrated Circuit</a><a _ngcontent-c12="" class="item" draggable="true">Integrated Circuit 2</a><a _ngcontent-c12="" class="item" draggable="true">Lamp</a><a _ngcontent-c12="" class="item" draggable="true">AND Gate</a><a _ngcontent-c12="" class="item" draggable="true">NAND Gate</a><a _ngcontent-c12="" class="item" draggable="true">OR Gate</a><a _ngcontent-c12="" class="item" draggable="true">NOR Gate</a><a _ngcontent-c12="" class="item" draggable="true">XOR Gate</a><a _ngcontent-c12="" class="item" draggable="true">XNOR Gate</a><a _ngcontent-c12="" class="item" draggable="true">NOT Gate</a><a _ngcontent-c12="" class="item" draggable="true">Schmitt Trigger NOT Gate</a><a _ngcontent-c12="" class="item" draggable="true">Op Amp</a><a _ngcontent-c12="" class="item" draggable="true">Motor</a><a _ngcontent-c12="" class="item" draggable="true">Servo Motor</a><a _ngcontent-c12="" class="item" draggable="true">Voltmeter</a><a _ngcontent-c12="" class="item" draggable="true">Ammeter</a><a _ngcontent-c12="" class="item" draggable="true">Microcontroller</a><a _ngcontent-c12="" class="item" draggable="true">Microphone</a><a _ngcontent-c12="" class="item" draggable="true">Label</a><a _ngcontent-c12="" class="item" draggable="true">NPN Transistor</a><a _ngcontent-c12="" class="item" draggable="true">PNP Transistor</a><a _ngcontent-c12="" class="item" draggable="true">N-Channel MOSFET</a><a _ngcontent-c12="" class="item" draggable="true">P-Channel MOSFET</a><a _ngcontent-c12="" class="item" draggable="true">NPN Phototransistor (2 pin)</a><a _ngcontent-c12="" class="item" draggable="true">PNP Phototransistor (2 pin)</a><a _ngcontent-c12="" class="item" draggable="true">NPN Phototransistor (3 pin)</a><a _ngcontent-c12="" class="item" draggable="true">PNP Phototransistor (3 pin)</a><a _ngcontent-c12="" class="item" draggable="true">Transformer</a><a _ngcontent-c12="" class="item" draggable="true">Speaker</a><a _ngcontent-c12="" class="item" draggable="true">Raspberry Pi</a><a _ngcontent-c12="" class="item" draggable="true">Model B</a><a _ngcontent-c12="" class="item" draggable="true">Model B GPIO</a><a _ngcontent-c12="" class="item" draggable="true">Raspberry Pi A+ / B+, 2 and Zero GPIO</a><a _ngcontent-c12="" class="item" draggable="true">HD44780</a><a _ngcontent-c12="" class="item" draggable="true">7 Segment Display</a><a _ngcontent-c12="" class="item" draggable="true">BCD Decoder</a><a _ngcontent-c12="" class="item" draggable="true">555 Oscillator</a><a _ngcontent-c12="" class="item" draggable="true">566 Oscillator</a><a _ngcontent-c12="" class="item" draggable="true">7805 Voltage Regulator</a><a _ngcontent-c12="" class="item" draggable="true">Arduino Uno</a><a _ngcontent-c12="" class="item" draggable="true">Relay</a><a _ngcontent-c12="" class="item" draggable="true">Flow</a><a _ngcontent-c12="" class="item" draggable="true">Triac</a><a _ngcontent-c12="" class="item" draggable="true">4510 BCD Counter</a><a _ngcontent-c12="" class="item" draggable="true">Reed Switch</a><a _ngcontent-c12="" class="item" draggable="true">VS1053</a><a _ngcontent-c12="" class="item" draggable="true">Bridge Rectifier</a><a _ngcontent-c12="" class="item" draggable="true">4017 Decade Counter</a><a _ngcontent-c12="" class="item" draggable="true">Arduino Nano v3</a><a _ngcontent-c12="" class="item" draggable="true">Arduino Nano v2</a><a _ngcontent-c12="" class="item" draggable="true">NodeMCU</a><a _ngcontent-c12="" class="item" href="https://www.circuit-diagram.org/help/new-components" target="_blank"><span _ngcontent-c12="" class="new-component">Need something else? <fa-icon _ngcontent-c12="" class="ng-fa-icon"><svg aria-hidden="true" data-prefix="fas" data-icon="external-link-alt" class="svg-inline--fa fa-external-link-alt fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M576 24v127.984c0 21.461-25.96 31.98-40.971 16.971l-35.707-35.709-243.523 243.523c-9.373 9.373-24.568 9.373-33.941 0l-22.627-22.627c-9.373-9.373-9.373-24.569 0-33.941L442.756 76.676l-35.703-35.705C391.982 25.9 402.656 0 424.024 0H552c13.255 0 24 10.745 24 24zM407.029 270.794l-16 16A23.999 23.999 0 0 0 384 303.765V448H64V128h264a24.003 24.003 0 0 0 16.97-7.029l16-16C376.089 89.851 365.381 64 344 64H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V287.764c0-21.382-25.852-32.09-40.971-16.97z"></path></svg></fa-icon></span></a></div></div><hr _ngcontent-c12=""><div _ngcontent-c12="" class="card-body sidebar-ad"><ng-adsense _ngcontent-c12=""><ins class="adsbygoogle" data-ad-client="ca-pub-1867562311950591" data-ad-slot="7656234870" data-ad-format="rectangle" data-ad-region="page-51621" style="display: inline-block; width: 200px; height: 200px;"></ins></ng-adsense></div><!----><div _ngcontent-c12=""><hr _ngcontent-c12=""><div _ngcontent-c12="" class="card-body"><div _ngcontent-c12="" class="leave-message"><fa-icon _ngcontent-c12="" class="ng-fa-icon"><svg aria-hidden="true" data-prefix="fas" data-icon="check-circle" class="svg-inline--fa fa-check-circle fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg></fa-icon><span _ngcontent-c12=""> Your circuit is saved if you leave this page. </span></div></div></div><hr _ngcontent-c12=""><div _ngcontent-c12="" class="card-body"><div _ngcontent-c12="" class="leave-message"> © 2019 Circuit Diagram </div></div></div><!----><!----></app-component-selector><app-layers _ngcontent-c7="" _nghost-c13=""><div _ngcontent-c13="" class="card"><h5 _ngcontent-c13="" class="card-header"><fa-icon _ngcontent-c13="" class="ng-fa-icon"><svg aria-hidden="true" data-prefix="fas" data-icon="layer-group" class="svg-inline--fa fa-layer-group fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M12.41 148.02l232.94 105.67c6.8 3.09 14.49 3.09 21.29 0l232.94-105.67c16.55-7.51 16.55-32.52 0-40.03L266.65 2.31a25.607 25.607 0 0 0-21.29 0L12.41 107.98c-16.55 7.51-16.55 32.53 0 40.04zm487.18 88.28l-58.09-26.33-161.64 73.27c-7.56 3.43-15.59 5.17-23.86 5.17s-16.29-1.74-23.86-5.17L70.51 209.97l-58.1 26.33c-16.55 7.5-16.55 32.5 0 40l232.94 105.59c6.8 3.08 14.49 3.08 21.29 0L499.59 276.3c16.55-7.5 16.55-32.5 0-40zm0 127.8l-57.87-26.23-161.86 73.37c-7.56 3.43-15.59 5.17-23.86 5.17s-16.29-1.74-23.86-5.17L70.29 337.87 12.41 364.1c-16.55 7.5-16.55 32.5 0 40l232.94 105.59c6.8 3.08 14.49 3.08 21.29 0L499.59 404.1c16.55-7.5 16.55-32.5 0-40z"></path></svg></fa-icon> Layers </h5><ul _ngcontent-c13="" class="list-group list-group-flush"><!----><li _ngcontent-c13="" class="list-group-item"><span _ngcontent-c13="" class="indent-0"></span><!----><!----><!----><span _ngcontent-c13="" class="layer-expand"></span><div _ngcontent-c13="" class="layer-content"><!----><!----><!----><fa-icon _ngcontent-c13="" class="ng-fa-icon"><svg aria-hidden="true" data-prefix="far" data-icon="file" class="svg-inline--fa fa-file fa-w-12" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M369.9 97.9L286 14C277 5 264.8-.1 252.1-.1H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V131.9c0-12.7-5.1-25-14.1-34zM332.1 128H256V51.9l76.1 76.1zM48 464V48h160v104c0 13.3 10.7 24 24 24h104v288H48z"></path></svg></fa-icon><span _ngcontent-c13="" class="layer-name">Polarised Capacitor</span><app-colour-picker _ngcontent-c13="" _nghost-c15=""><div _ngcontent-c15="" class="colour-indicator" container="body" ngbtooltip="Color" placement="top" style="background-color: white;"></div><!----></app-colour-picker></div></li><li _ngcontent-c13="" class="list-group-item"><span _ngcontent-c13="" class="indent-0"></span><!----><!----><!----><span _ngcontent-c13="" class="layer-expand"></span><div _ngcontent-c13="" class="layer-content"><!----><!----><!----><fa-icon _ngcontent-c13="" class="ng-fa-icon"><svg aria-hidden="true" data-prefix="far" data-icon="file" class="svg-inline--fa fa-file fa-w-12" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M369.9 97.9L286 14C277 5 264.8-.1 252.1-.1H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V131.9c0-12.7-5.1-25-14.1-34zM332.1 128H256V51.9l76.1 76.1zM48 464V48h160v104c0 13.3 10.7 24 24 24h104v288H48z"></path></svg></fa-icon><span _ngcontent-c13="" class="layer-name">Polarised Capacitor</span><app-colour-picker _ngcontent-c13="" _nghost-c15=""><div _ngcontent-c15="" class="colour-indicator" container="body" ngbtooltip="Color" placement="top" style="background-color: white;"></div><!----></app-colour-picker></div></li><li _ngcontent-c13="" class="list-group-item"><span _ngcontent-c13="" class="indent-0"></span><!----><!----><!----><span _ngcontent-c13="" class="layer-expand"></span><div _ngcontent-c13="" class="layer-content"><!----><!----><!----><fa-icon _ngcontent-c13="" class="ng-fa-icon"><svg aria-hidden="true" data-prefix="far" data-icon="file" class="svg-inline--fa fa-file fa-w-12" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M369.9 97.9L286 14C277 5 264.8-.1 252.1-.1H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V131.9c0-12.7-5.1-25-14.1-34zM332.1 128H256V51.9l76.1 76.1zM48 464V48h160v104c0 13.3 10.7 24 24 24h104v288H48z"></path></svg></fa-icon><span _ngcontent-c13="" class="layer-name">NPN Transistor</span><app-colour-picker _ngcontent-c13="" _nghost-c15=""><div _ngcontent-c15="" class="colour-indicator" container="body" ngbtooltip="Color" placement="top" style="background-color: white;"></div><!----></app-colour-picker></div></li><li _ngcontent-c13="" class="list-group-item"><span _ngcontent-c13="" class="indent-0"></span><!----><!----><!----><span _ngcontent-c13="" class="layer-expand"></span><div _ngcontent-c13="" class="layer-content"><!----><!----><!----><fa-icon _ngcontent-c13="" class="ng-fa-icon"><svg aria-hidden="true" data-prefix="far" data-icon="file" class="svg-inline--fa fa-file fa-w-12" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M369.9 97.9L286 14C277 5 264.8-.1 252.1-.1H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V131.9c0-12.7-5.1-25-14.1-34zM332.1 128H256V51.9l76.1 76.1zM48 464V48h160v104c0 13.3 10.7 24 24 24h104v288H48z"></path></svg></fa-icon><span _ngcontent-c13="" class="layer-name">NPN Transistor</span><app-colour-picker _ngcontent-c13="" _nghost-c15=""><div _ngcontent-c15="" class="colour-indicator" container="body" ngbtooltip="Color" placement="top" style="background-color: white;"></div><!----></app-colour-picker></div></li><li _ngcontent-c13="" class="list-group-item"><span _ngcontent-c13="" class="indent-0"></span><!----><!----><!----><span _ngcontent-c13="" class="layer-expand"></span><div _ngcontent-c13="" class="layer-content"><!----><!----><!----><fa-icon _ngcontent-c13="" class="ng-fa-icon"><svg aria-hidden="true" data-prefix="far" data-icon="file" class="svg-inline--fa fa-file fa-w-12" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M369.9 97.9L286 14C277 5 264.8-.1 252.1-.1H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V131.9c0-12.7-5.1-25-14.1-34zM332.1 128H256V51.9l76.1 76.1zM48 464V48h160v104c0 13.3 10.7 24 24 24h104v288H48z"></path></svg></fa-icon><span _ngcontent-c13="" class="layer-name">Resistor</span><app-colour-picker _ngcontent-c13="" _nghost-c15=""><div _ngcontent-c15="" class="colour-indicator" container="body" ngbtooltip="Color" placement="top" style="background-color: white;"></div><!----></app-colour-picker></div></li><li _ngcontent-c13="" class="list-group-item"><span _ngcontent-c13="" class="indent-0"></span><!----><!----><!----><span _ngcontent-c13="" class="layer-expand"></span><div _ngcontent-c13="" class="layer-content"><!----><!----><!----><fa-icon _ngcontent-c13="" class="ng-fa-icon"><svg aria-hidden="true" data-prefix="far" data-icon="file" class="svg-inline--fa fa-file fa-w-12" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M369.9 97.9L286 14C277 5 264.8-.1 252.1-.1H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V131.9c0-12.7-5.1-25-14.1-34zM332.1 128H256V51.9l76.1 76.1zM48 464V48h160v104c0 13.3 10.7 24 24 24h104v288H48z"></path></svg></fa-icon><span _ngcontent-c13="" class="layer-name">Resistor</span><app-colour-picker _ngcontent-c13="" _nghost-c15=""><div _ngcontent-c15="" class="colour-indicator" container="body" ngbtooltip="Color" placement="top" style="background-color: white;"></div><!----></app-colour-picker></div></li><li _ngcontent-c13="" class="list-group-item"><span _ngcontent-c13="" class="indent-0"></span><!----><!----><!----><span _ngcontent-c13="" class="layer-expand"></span><div _ngcontent-c13="" class="layer-content"><!----><!----><!----><fa-icon _ngcontent-c13="" class="ng-fa-icon"><svg aria-hidden="true" data-prefix="far" data-icon="file" class="svg-inline--fa fa-file fa-w-12" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M369.9 97.9L286 14C277 5 264.8-.1 252.1-.1H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V131.9c0-12.7-5.1-25-14.1-34zM332.1 128H256V51.9l76.1 76.1zM48 464V48h160v104c0 13.3 10.7 24 24 24h104v288H48z"></path></svg></fa-icon><span _ngcontent-c13="" class="layer-name">Resistor</span><app-colour-picker _ngcontent-c13="" _nghost-c15=""><div _ngcontent-c15="" class="colour-indicator" container="body" ngbtooltip="Color" placement="top" style="background-color: white;"></div><!----></app-colour-picker></div></li><li _ngcontent-c13="" class="list-group-item"><span _ngcontent-c13="" class="indent-0"></span><!----><!----><!----><span _ngcontent-c13="" class="layer-expand"></span><div _ngcontent-c13="" class="layer-content"><!----><!----><!----><fa-icon _ngcontent-c13="" class="ng-fa-icon"><svg aria-hidden="true" data-prefix="far" data-icon="file" class="svg-inline--fa fa-file fa-w-12" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M369.9 97.9L286 14C277 5 264.8-.1 252.1-.1H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V131.9c0-12.7-5.1-25-14.1-34zM332.1 128H256V51.9l76.1 76.1zM48 464V48h160v104c0 13.3 10.7 24 24 24h104v288H48z"></path></svg></fa-icon><span _ngcontent-c13="" class="layer-name">Resistor</span><app-colour-picker _ngcontent-c13="" _nghost-c15=""><div _ngcontent-c15="" class="colour-indicator" container="body" ngbtooltip="Color" placement="top" style="background-color: white;"></div><!----></app-colour-picker></div></li><li _ngcontent-c13="" class="list-group-item"><span _ngcontent-c13="" class="indent-0"></span><!----><!----><!----><span _ngcontent-c13="" class="layer-expand"></span><div _ngcontent-c13="" class="layer-content"><!----><!----><!----><fa-icon _ngcontent-c13="" class="ng-fa-icon"><svg aria-hidden="true" data-prefix="far" data-icon="file" class="svg-inline--fa fa-file fa-w-12" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M369.9 97.9L286 14C277 5 264.8-.1 252.1-.1H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V131.9c0-12.7-5.1-25-14.1-34zM332.1 128H256V51.9l76.1 76.1zM48 464V48h160v104c0 13.3 10.7 24 24 24h104v288H48z"></path></svg></fa-icon><span _ngcontent-c13="" class="layer-name">LED</span><app-colour-picker _ngcontent-c13="" _nghost-c15=""><div _ngcontent-c15="" class="colour-indicator" container="body" ngbtooltip="Color" placement="top" style="background-color: white;"></div><!----></app-colour-picker></div></li><li _ngcontent-c13="" class="list-group-item"><span _ngcontent-c13="" class="indent-0"></span><!----><!----><!----><span _ngcontent-c13="" class="layer-expand"></span><div _ngcontent-c13="" class="layer-content"><!----><!----><!----><fa-icon _ngcontent-c13="" class="ng-fa-icon"><svg aria-hidden="true" data-prefix="far" data-icon="file" class="svg-inline--fa fa-file fa-w-12" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M369.9 97.9L286 14C277 5 264.8-.1 252.1-.1H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V131.9c0-12.7-5.1-25-14.1-34zM332.1 128H256V51.9l76.1 76.1zM48 464V48h160v104c0 13.3 10.7 24 24 24h104v288H48z"></path></svg></fa-icon><span _ngcontent-c13="" class="layer-name">LED</span><app-colour-picker _ngcontent-c13="" _nghost-c15=""><div _ngcontent-c15="" class="colour-indicator" container="body" ngbtooltip="Color" placement="top" style="background-color: white;"></div><!----></app-colour-picker></div></li><li _ngcontent-c13="" class="list-group-item"><span _ngcontent-c13="" class="indent-0"></span><!----><!----><!----><span _ngcontent-c13="" class="layer-expand"></span><div _ngcontent-c13="" class="layer-content"><!----><!----><!----><fa-icon _ngcontent-c13="" class="ng-fa-icon"><svg aria-hidden="true" data-prefix="far" data-icon="file" class="svg-inline--fa fa-file fa-w-12" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M369.9 97.9L286 14C277 5 264.8-.1 252.1-.1H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V131.9c0-12.7-5.1-25-14.1-34zM332.1 128H256V51.9l76.1 76.1zM48 464V48h160v104c0 13.3 10.7 24 24 24h104v288H48z"></path></svg></fa-icon><span _ngcontent-c13="" class="layer-name">DC Source</span><app-colour-picker _ngcontent-c13="" _nghost-c15=""><div _ngcontent-c15="" class="colour-indicator" container="body" ngbtooltip="Color" placement="top" style="background-color: white;"></div><!----></app-colour-picker></div></li><li _ngcontent-c13="" class="list-group-item"><span _ngcontent-c13="" class="indent-0"></span><!----><!----><!----><span _ngcontent-c13="" class="layer-expand"></span><div _ngcontent-c13="" class="layer-content"><!----><!----><!----><fa-icon _ngcontent-c13="" class="ng-fa-icon"><svg aria-hidden="true" data-prefix="far" data-icon="file" class="svg-inline--fa fa-file fa-w-12" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M369.9 97.9L286 14C277 5 264.8-.1 252.1-.1H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V131.9c0-12.7-5.1-25-14.1-34zM332.1 128H256V51.9l76.1 76.1zM48 464V48h160v104c0 13.3 10.7 24 24 24h104v288H48z"></path></svg></fa-icon><span _ngcontent-c13="" class="layer-name">Wire</span><app-colour-picker _ngcontent-c13="" _nghost-c15=""><div _ngcontent-c15="" class="colour-indicator" container="body" ngbtooltip="Color" placement="top" style="background-color: white;"></div><!----></app-colour-picker></div></li><li _ngcontent-c13="" class="list-group-item"><span _ngcontent-c13="" class="indent-0"></span><!----><!----><!----><span _ngcontent-c13="" class="layer-expand"></span><div _ngcontent-c13="" class="layer-content"><!----><!----><!----><fa-icon _ngcontent-c13="" class="ng-fa-icon"><svg aria-hidden="true" data-prefix="far" data-icon="file" class="svg-inline--fa fa-file fa-w-12" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M369.9 97.9L286 14C277 5 264.8-.1 252.1-.1H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V131.9c0-12.7-5.1-25-14.1-34zM332.1 128H256V51.9l76.1 76.1zM48 464V48h160v104c0 13.3 10.7 24 24 24h104v288H48z"></path></svg></fa-icon><span _ngcontent-c13="" class="layer-name">Wire</span><app-colour-picker _ngcontent-c13="" _nghost-c15=""><div _ngcontent-c15="" class="colour-indicator" container="body" ngbtooltip="Color" placement="top" style="background-color: white;"></div><!----></app-colour-picker></div></li></ul><div _ngcontent-c13="" class="card-footer"><fa-icon _ngcontent-c13="" class="button ng-fa-icon disabled" placement="top" triggers="mouseenter:mouseleave"><svg aria-hidden="true" data-prefix="fas" data-icon="trash" class="svg-inline--fa fa-trash fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 84V56c0-13.3 10.7-24 24-24h112l9.4-18.7c4-8.2 12.3-13.3 21.4-13.3h114.3c9.1 0 17.4 5.1 21.5 13.3L312 32h112c13.3 0 24 10.7 24 24v28c0 6.6-5.4 12-12 12H12C5.4 96 0 90.6 0 84zm415.2 56.7L394.8 467c-1.6 25.3-22.6 45-47.9 45H101.1c-25.3 0-46.3-19.7-47.9-45L32.8 140.7c-.4-6.9 5.1-12.7 12-12.7h358.5c6.8 0 12.3 5.8 11.9 12.7z"></path></svg></fa-icon><fa-icon _ngcontent-c13="" class="button ng-fa-icon disabled" placement="top" triggers="mouseenter:mouseleave"><svg aria-hidden="true" data-prefix="fas" data-icon="folder" class="svg-inline--fa fa-folder fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z"></path></svg></fa-icon><fa-icon _ngcontent-c13="" class="button ng-fa-icon disabled" placement="top" triggers="mouseenter:mouseleave"><svg aria-hidden="true" data-prefix="fas" data-icon="folder-minus" class="svg-inline--fa fa-folder-minus fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48zm-96 168c0 8.84-7.16 16-16 16H160c-8.84 0-16-7.16-16-16v-16c0-8.84 7.16-16 16-16h192c8.84 0 16 7.16 16 16v16z"></path></svg></fa-icon><fa-icon _ngcontent-c13="" class="button ng-fa-icon disabled" placement="top" triggers="mouseenter:mouseleave"><svg aria-hidden="true" data-prefix="fas" data-icon="clone" class="svg-inline--fa fa-clone fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 0c26.51 0 48 21.49 48 48v288c0 26.51-21.49 48-48 48H176c-26.51 0-48-21.49-48-48V48c0-26.51 21.49-48 48-48h288M176 416c-44.112 0-80-35.888-80-80V128H48c-26.51 0-48 21.49-48 48v288c0 26.51 21.49 48 48 48h288c26.51 0 48-21.49 48-48v-48H176z"></path></svg></fa-icon></div></div><!----><!----><!----><!----></app-layers><app-status-bar _ngcontent-c7="" _nghost-c14=""><!----></app-status-bar></app-circuit-editor></app-editor-keybindings></ng-component></div></main><ng-progress _ngcontent-c0="" role="progressbar" spinnerposition="right" dir="ltr+" thick="false" fixed="true"><!----><!----><div class="ng-progress-bar" style="transition: opacity 200ms linear 0s;"><div class="ng-bar-placeholder"><div class="ng-bar" style="transform: translate3d(0%, 0px, 0px); background-color: white; transition: none 0s ease 0s;"><!----><div class="ng-meteor" style="box-shadow: white 0px 0px 10px, white 0px 0px 5px;"></div></div></div><!----></div></ng-progress><!----></app-root>
+<script type="text/javascript" src="./Circuit2html_files/runtime.ec2944dd8b20ec099bf3.js.download"></script><script type="text/javascript" src="./Circuit2html_files/polyfills.c6871e56cb80756a5498.js.download"></script><script type="text/javascript" src="./Circuit2html_files/main.fec27ffb5ae71bfb2426.js.download"></script>
+
+<svg id="SvgjsSvg1001" width="2" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" style="overflow: hidden; top: -100%; left: -100%; position: absolute; opacity: 0;"><defs id="SvgjsDefs1002"></defs><polyline id="SvgjsPolyline1003" points="0,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><iframe id="ssIFrame_google" sandbox="allow-scripts allow-same-origin" aria-hidden="true" frame-border="0" src="./Circuit2html_files/iframe.html" style="position: absolute; width: 1px; height: 1px; left: -9999px; top: -9999px; right: -9999px; bottom: -9999px; display: none;"></iframe><div id="ngb-live" aria-live="polite" aria-atomic="true" class="sr-only">4 results available</div></body></html>
